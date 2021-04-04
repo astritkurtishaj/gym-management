@@ -8,12 +8,12 @@
         <thead>
         <tr>
             <th scope="col">#</th>
-            <th scope="col">Emri</th>
-            <th scope="col">Mbiemri</th>
-            <th scope="col">Datelindja</th>
-            <th scope="col">Data Skadimit</th>
-            <th scope="col">Fotografia</th>
-            <th scope="col">Veprimet </th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Birthdate</th>
+            <th scope="col">Expire Date</th>
+            <th scope="col">Profile Picture</th>
+            <th scope="col">Actions</th>
         </tr>
         </thead>
         <tbody>
