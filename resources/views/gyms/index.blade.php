@@ -33,9 +33,9 @@
 
                             @csrf
                             {{ method_field('DELETE') }}
-                            <a class="btn btn-success" href="{{ url("members/$member->id/edit") }}">Edito</a>
+                            <a class="btn btn-success" href="{{ url("members/$member->id/edit") }}">Edit</a>
 
-                            <button type="submit" class="btn btn-danger">Fshije</button>
+                            <button type="submit" class="btn btn-danger">Delete</button>
                         </form>
                     </td>
                 </tr>
