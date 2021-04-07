@@ -4,6 +4,7 @@
     <br>
     <div class="container m-auto col-5">
         <h3>Edit Gym Member Form</h3>
+        <a href="{{url('members')}}">Back to main page</a>
     </div><br>
     <form class="col-6 m-auto" method="POST" action="{{ url("members/$member->id") }}" enctype="multipart/form-data">
         @csrf

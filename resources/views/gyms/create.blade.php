@@ -4,6 +4,7 @@
     <br>
     <div class="container m-auto col-5">
         <h3>Add Gym Member Form</h3>
+        <a href="{{url('members')}}">Back to main page</a>
     </div><br>
 
     <form class="col-5 m-auto" method="POST" action="{{ url('members') }}" enctype="multipart/form-data">
@@ -32,4 +33,5 @@
 
         <button class="btn btn-primary" type="submit">Save</button>
     </form>
+
 @stop
