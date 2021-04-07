@@ -1,8 +1,9 @@
 @extends('layouts.app')
 @section('content')
-    <h1>Contact Page </h1>
+    <h1>All Gym Members </h1>
 
-    <a class="btn btn-primary" href="{{ url('/members/create') }}" role="button">Add New Member</a>
+    <a class="btn btn-success mb-2" href="{{ url('/members/create') }}" role="button">Add New Member</a>
+
 
     <table class="table">
         <thead>
@@ -33,7 +34,7 @@
 
                             @csrf
                             {{ method_field('DELETE') }}
-                            <a class="btn btn-success" href="{{ url("members/$member->id/edit") }}">Edit</a>
+                            <a class="btn btn-secondary" href="{{ url("members/$member->id/edit") }}">Edit</a>
 
                             <button type="submit" class="btn btn-danger">Delete</button>
                         </form>
