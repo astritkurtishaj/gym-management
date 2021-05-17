@@ -43,7 +43,7 @@ class ExpiredMemberships extends Command
     {
 
         $expireDate = now()->format('y-m-d');
-        $expiredMembers = GymMember::where('expire_date', '<', $expireDate)->get();
+        $expiredMembers = GymMember::where('expire_date', '=', $expireDate)->get();
         foreach ($expiredMembers as $member) {
             $email = $member->email;
             Mail::to($email)
