@@ -2,12 +2,14 @@
 
 namespace App\Console\Commands;
 
+use App\Mail\ThreeDaysBeforeExpireMail;
 use App\Mail\WelcomeMemberMail;
 use App\Models\GymMember;
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Support\Facades\Mail;
 
-class CheckExpiredMemberships extends Command implements ShouldQueue
+class ThreeDaysBeforeExpireMemberships extends Command
 {
     /**
      * The name and signature of the console command.
@@ -40,14 +42,13 @@ class CheckExpiredMemberships extends Command implements ShouldQueue
      */
     public function handle()
     {
-        $expireDate = now()->addDays(3);
-        $expiredMembers = GymMember::where('expire_date', '=', $expireDate)->get();
-        foreach ($expiredMembers as $member) {
-            $email = $expiredMembers->email;
-            Mail::to($email)
-                ->subject("Your membership will expire in 3 days.")
-                ->queue(new WelcomeMemberMail());
-        }
+            $expireDate = now()->addDays(3)->format('y-m-d');
+            $expiredMembers = GymMember::where('expire_date', '=', $expireDate)->get();
+            foreach ($expiredMembers as $member) {
+                $email = $member->email;
+                Mail::to($email)
+                    ->send(new ThreeDaysBeforeExpireMail());
+            }
         return 0;
     }
 }
