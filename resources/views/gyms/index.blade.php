@@ -1,8 +1,8 @@
 @extends('layouts.app')
 @section('content')
-    <h1>All Gym Members </h1>
 
-    <a class="btn btn-success mb-2" href="{{ url('/members/create') }}" role="button">Add New Member</a>
+    <a class="inline-flex items-center h-8 px-4 m-2 text-sm text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800"
+       href="{{ url('/members/create') }}" role="button">Add New Member</a>
 
     <div class="flex flex-col">
         <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
