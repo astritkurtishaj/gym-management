@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class GymMember extends Model
 {
-    protected $fillable = ['first_name', 'last_name', 'birthdate', 'expire_date', 'profile_picture'];
+    protected $fillable = ['first_name', 'last_name', 'email', 'birthdate', 'expire_date', 'profile_picture'];
 
     protected $casts = [
         'expire_date' => 'datetime:Y-m-d',

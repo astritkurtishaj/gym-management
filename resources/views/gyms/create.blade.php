@@ -18,6 +18,10 @@
             <input type="text" class="form-control" id="last_name" name="last_name" required>
         </div>
         <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
             <label for="birthdate" class="form-label">Birthdate</label>
             <input type="date" class="form-control" id="birthdate"  name="birthdate" required>
         </div>
